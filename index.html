@@ -1,18 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="asset/index.css">
-    <link rel="reset" href="asset/reset.css">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <title>2 INPUT 1 OUTPUT TEMPLATE</title>
+    <style>
+
+       body{ background-color: rgb(210, 184, 39);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+  }
+
+        #charInput1 {
+        background-color:white;
+        border:2px solid rgb(255, 237, 170) ;
+        background-color:aliceblue;
+        font-size: 1rem;
+        border-radius: 20px;
+        text-align: center;
+        color: rgb(255, 89, 0);
+        }
+        #charInput1:active{
+            border:2px solid rgb(183, 0, 0) ;
+        }
+
+        #charInput2 {
+        background-color:white;
+        border:2px solid rgb(255, 237, 170) ;
+        background-color:aliceblue;
+        font-size: 1rem;
+        border-radius: 20px;
+        text-align: center;
+        color: rgb(255, 89, 0);
+        }
+        #charInput2:active{
+        border:2px solid rgb(183, 0, 0) ;
+        }
+        
+
+        /* STYLE FOR THE SUBMIT BUTTON */
+        #submitButton {
+        color: rgb(255, 169, 56);
+        background-color:rgb(255, 237, 170);
+        text-align: center;
+        border-color: transparent;
+        font-family: 'roboto';
+        border:2px solid rgb(255, 255, 255);
+        font-size: 1rem;
+        border-radius: 20px;
+        }
+        #submitButton:active{
+            scale: 1.1;
+            border:2px solid rgb(183, 0, 0) ;
+            color: rgb(255, 140, 0) ;
+            font-weight: 600;
+        }
+        .search-container {
+         display: flex;
+         align-items: center;
+         gap: 10px; 
+         margin-top:1rem ;
+         margin-bottom: 3rem;
+}
+#displayedImage {
+            display: none;
+            width: 27rem;
+            animation: border 3s ease-in-out infinite;
+}
+@keyframes border{
+   0% {box-shadow: 0px 40px 50px rgb(251, 244, 35)};
+   50% {box-shadow: 0px 10px 20px rgb(255, 255, 255)};
+   100% {box-shadow: 10px 20px 30px rgb(141, 244, 126)};}
+
+
+.text1{
+            color: rgb(240, 236, 214);
+            text-align: center;
+            font-family: 'Roboto';
+            font-size: 2.5rem;
+            margin: 0.5rem;
+            margin-top: 1rem;
+            animation: shine 3s ease-in-out infinite;
+        }
+        @keyframes shine{
+            0% {color: rgb(240, 236, 214);}
+           50% {color: rgb(255, 191, 0)};
+           100% {color:  rgb(240, 236, 214)};
+        }
+
+        .text2{
+            color: rgb(156, 122, 122);
+            text-align: center;
+            font-family: 'Roboto';
+            font-size: 1.2rem;
+            margin: 0.5rem;
+            font-weight: 200;
+        }
+
+    .text2:hover{
+        color:white;
+    }
+
+    @media(max-width:768px)
+{
+
+    body{ background-color: rgb(220, 77, 0);
+            display: flex;
+            height: 100vh;
+            margin: 0;
+  }
+  #charInput1 {
+        background-color:white;
+        border:2px solidrgb(255, 205, 170) ;
+        background-color:aliceblue;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        text-align: center;
+        color: rgb(255, 123, 0);
+        }
+        #charInput1:hover{
+            border:2px solid rgb(183, 0, 0) ;
+        }
+
+        #charInput2 {
+        background-color:white;
+        border:2px solid rgb(255, 205, 170) ;
+        background-color:aliceblue;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        text-align: center;
+        color: rgb(255, 123, 0);
+        }
+        #charInput2:hover{
+        border:2px solid rgb(183, 0, 0) ;
+        }
+
+        #submitButton {
+        color: rgb(255, 169, 56);
+        background-color:rgb(255, 237, 170);
+        text-align: center;
+        border-color: transparent;
+        font-family: 'roboto';
+        border:2px solid rgb(255, 255, 255);
+        font-size: 0.8rem;
+        border-radius: 20px;
+        }
+        #submitButton:hover{
+            scale: 1.1;
+            border:2px solid rgb(183, 0, 0) ;
+            color: rgb(139, 77, 0) ;
+            font-weight: 600;
+        }
+.text1{
+            color: rgb(240, 236, 214);
+            text-align: center;
+            font-family: 'Roboto';
+            font-size: 3rem;
+            margin: 0.5rem;
+            margin-top: 1rem;
+            animation: shine 3s ease-in-out infinite;
+        }
+        @keyframes shine{
+            0% {color: rgb(240, 236, 214);}
+           50% {color: rgb(255, 191, 0)};
+           100% {color:  rgb(240, 236, 214)};
+        }
+
+        .text2{
+            color: rgb(127, 0, 0);
+            text-align: center;
+            font-family: 'Roboto';
+            font-size: 1.3rem;
+            margin: 0.5rem;
+            font-weight: 200;
+        }
+
+    .text2:hover{
+        color:white;
+    }
+    #displayedImage {
+            display: none;
+            width: 22rem;
+            animation: border 3s ease-in-out infinite;
+}
+@keyframes border{
+   0% {box-shadow: 0px 40px 50px rgb(251, 244, 35)};
+   50% {box-shadow: 0px 10px 20px rgb(255, 255, 255)};
+   100% {box-shadow: 10px 20px 30px rgb(141, 244, 126)};}
+}
+    </style>
 </head>
 <body>
-    <a class="Start" href="https://sixingch.github.io/project-1-sixing/entries/entry1/entry1.html">Start</a>
-   <img src="asset/tear.svg" alt="tear background">
+
+    <h1 class="text1">Grammy Award for Song of the Year</h1>
+    <p1 class="text2">Type in the artist's initials to find the song</p1>
+
+    <div class="search-container">
+    <input type="text" id="charInput1" maxlength="1">
+    <input type="text" id="charInput2" maxlength="1">
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+    <button onclick="displayImage()" id="submitButton">Show Image</button>
+</div>
+    <!-- IMAGE TO DISPLAY -->
+    <img id="displayedImage" src="" alt="Displayed Image">
+
+
+    <!-- Image Display Script Below -->
+    <script>
+
+        function displayImage() {
+            const imgElement = document.getElementById("displayedImage");
+
+            //Letter
+            const input1_letter = document.getElementById("charInput1").value.toUpperCase();
+            const input2_letter = document.getElementById("charInput2").value.toUpperCase();
+            
+            //Number
+            const input1_number = input1_letter.charCodeAt(); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
+            const input2_number = input2_letter.charCodeAt(); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
+
+            //HINTS
+            //HINT 1: You can compare strings with comparison operators and boolean operators
+            //COMPARISON & LOGICAL OPERATORS: https://www.w3schools.com/js/js_comparisons.asp
+            if(input1_letter === "K" && input2_letter !== "L") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "/Users/chensixing/Desktop/two-inputoutput-/asset/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            }
+
+
+            //HINT 2: Assign an image based numerical values
+            if(input1_number == 75 && input2_number == 76) { //If input1_number is 67 (C) AND input2_number is 68 (D), then show this image
+                imgElement.src = "/Users/chensixing/Desktop/two-inputoutput-/asset/IMG_3152.JPG"
+                imgElement.style.display = "block";
+            } 
+
+
+            //HINT 3: You can perform simple math operations on the variables
+            //Arithmetic: https://www.w3schools.com/js/js_arithmetic.asp
+            let mymathresult = input1_number - input2_number;
+            console.log(mymathresult); //Console is a way to show a value in the console inspector
+
+            if(mymathresult < -1) { //If mymathresult is less than 1, then show this image
+                imgElement.src = "/Users/chensixing/Desktop/two-inputoutput-/asset/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            }
+
+            //Remember to use if else statements to capture error conditions
+
+        }
+    </script>
+
 </body>
 </html>

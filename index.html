@@ -199,7 +199,7 @@
 </head>
 <body>
 
-    <h1 class="text1">Grammy Award for Song of the Year</h1>
+    <h1 class="text1">Grammy Award for Songs of the Year</h1>
     <p1 class="text2">Type in the artist's initials to find the song</p1>
 
     <div class="search-container">
@@ -248,14 +248,26 @@
             let mymathresult = input1_number - input2_number;
             console.log(mymathresult); //Console is a way to show a value in the console inspector
 
-            if(mymathresult < -1) { //If mymathresult is less than 1, then show this image
+            if(mymathresult < -3) { //If mymathresult is less than 1, then show this image
                 imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
                 imgElement.style.display = "block";
             }
 
             //Remember to use if else statements to capture error conditions
+            if(input1_letter === "B" && input2_letter !== "E") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            }
+
+
+            //HINT 2: Assign an image based numerical values
+            if(input1_number ==66 && input2_number == 69) { //If input1_number is 67 (C) AND input2_number is 68 (D), then show this image
+                imgElement.src = "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad"
+                imgElement.style.display = "block";
+            } 
 
         }
+     
     </script>
 
 </body>

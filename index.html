@@ -107,6 +107,23 @@
     .text2:hover{
         color:white;
     }
+    .cd{
+        display: block;
+        width: 8rem;
+        height:auto ;
+        animation:scale 2s linear infinite reverse ;
+       }
+
+       @keyframes scale {
+0% {
+        transform: scale(1)
+    }
+50% {
+        transform: scale(1.2)
+    }
+100% {
+        transform: scale(1)
+    }}
 
     @media(max-width:768px)
 {
@@ -195,25 +212,24 @@
    50% {box-shadow: 0px 10px 20px rgb(255, 255, 255)};
    100% {box-shadow: 10px 20px 30px rgb(141, 244, 126)};}
 }
+
     </style>
 </head>
 <body>
-
-    <h1 class="text1">Grammy Award for Songs of the Year</h1>
-    <p1 class="text2">Type in the artist's initials to find the song</p1>
+    <img src="asset/Gramophone-Icon-Only_Full-Color-01.webp" alt="cd" class="cd">
+    <h1 class="text1">Grammy Award 2025</h1>
+    <p1 class="text2">Type in the artist's initials to find the song&albums</p1>
 
     <div class="search-container">
     <input type="text" id="charInput1" maxlength="1">
     <input type="text" id="charInput2" maxlength="1">
 
-    <!-- BUTTON TO DISPLAY IMAGE -->
+
     <button onclick="displayImage()" id="submitButton">Show Image</button>
 </div>
-    <!-- IMAGE TO DISPLAY -->
+
     <img id="displayedImage" src="" alt="Displayed Image">
 
-
-    <!-- Image Display Script Below -->
     <script>
 
         function displayImage() {
@@ -227,44 +243,55 @@
             const input1_number = input1_letter.charCodeAt(); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
             const input2_number = input2_letter.charCodeAt(); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
 
-            //HINTS
-            //HINT 1: You can compare strings with comparison operators and boolean operators
-            //COMPARISON & LOGICAL OPERATORS: https://www.w3schools.com/js/js_comparisons.asp
             if(input1_letter === "K" && input2_letter !== "L") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
                 imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
                 imgElement.style.display = "block";
-            }
-
-
-            //HINT 2: Assign an image based numerical values
-            if(input1_number == 75 && input2_number == 76) { //If input1_number is 67 (C) AND input2_number is 68 (D), then show this image
-                imgElement.src = "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad"
+            } else if(input1_letter === "D" && input2_letter !== "C") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
                 imgElement.style.display = "block";
-            } 
-
-
-            //HINT 3: You can perform simple math operations on the variables
-            //Arithmetic: https://www.w3schools.com/js/js_arithmetic.asp
-            let mymathresult = input1_number - input2_number;
-            console.log(mymathresult); //Console is a way to show a value in the console inspector
-
-            if(mymathresult < -3) { //If mymathresult is less than 1, then show this image
+            } else if(input1_letter === "S" && input2_letter !== "C") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            }  else if(input1_letter === "C" && input2_letter !== "X") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            }  else if(input1_letter === "S" && input2_letter !== "V") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            } else if(input1_letter === "B" && input2_letter !== "C") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            } else if(input1_letter === "R" && input2_letter !== "S") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
+                imgElement.style.display = "block";
+            } else if(input1_letter === "C" && input2_letter !== "B") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
                 imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
                 imgElement.style.display = "block";
             }
 
-            //Remember to use if else statements to capture error conditions
-            if(input1_letter === "B" && input2_letter !== "E") { //If input1_letter equals A AND input2_letter does not equal B, then show this image
-                imgElement.src = "https://i.ytimg.com/vi/wAbnNZDhYrA/maxresdefault.jpg"
-                imgElement.style.display = "block";
-            }
+ 
 
 
-            //HINT 2: Assign an image based numerical values
-            if(input1_number ==66 && input2_number == 69) { //If input1_number is 67 (C) AND input2_number is 68 (D), then show this image
+            if(input1_number == 75 && input2_number == 76) { 
                 imgElement.src = "https://i.scdn.co/image/ab67616d0000b2731ea0c62b2339cbf493a999ad"
-                imgElement.style.display = "block";
-            } 
+            }  else if (input1_number == 66 && input2_number == 67) { 
+                imgElement.src = "https://ca-times.brightspotcdn.com/dims4/default/ccd627c/2147483647/strip/true/crop/2100x2100+0+0/resize/1200x1200!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F89%2F68%2F6b84266d4f28893b6271c03edd4f%2Fmusic-review-beyonce-60283.jpg"
+                imgElement.style.display = "block";} else if(input1_number == 68 && input2_number == 67) { 
+                imgElement.src = "https://snworksceo.imgix.net/tdl/dbdaf12a-ec70-4cac-9ee4-d9a78d1b99c6.sized-1000x1000.png?w=1000"
+                imgElement.style.display = "block";} else if(input1_number ==83 && input2_number == 67) { 
+                imgElement.src = "https://i.scdn.co/image/ab67616d0000b273fd8d7a8d96871e791cb1f626"
+                imgElement.style.display = "block";} else if(input1_number ==67 && input2_number == 88) { 
+                imgElement.src = "https://upload.wikimedia.org/wikipedia/commons/6/60/Charli_XCX_-_Brat_%28album_cover%29.png"
+                imgElement.style.display = "block";} else if(input1_number ==83 && input2_number == 86) { 
+                imgElement.src = "https://i.scdn.co/image/ab67616d0000b273721ec8e8dfb11746e14f3c98"
+                imgElement.style.display = "block";} else if(input1_number ==82 && input2_number == 83) { 
+                imgElement.src = "https://upload.wikimedia.org/wikipedia/en/9/90/The_Rolling_Stones_-_Hackney_Diamonds.jpg"
+                imgElement.style.display = "block";} else if(input1_number ==67 && input2_number == 66) { 
+                imgElement.src = "https://m.media-amazon.com/images/I/412ru2unYrL._UXNaN_FMjpg_QL85_.jpg"
+                imgElement.style.display = "block";}
+       
+
+
 
         }
      
